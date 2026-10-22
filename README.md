@@ -1,191 +1,121 @@
 <div align="center">
 
-<!-- ========================================================
-     ZONA 1: EL ARCADE MEDIEVAL · HEADER ANIMADO
-     ======================================================== -->
+<!-- =====================================================================
+     PERFIL FRANCISCO LANCHE · ESTÉTICA TERMINAL LINUX (Tokyo Night)
+     Los SVG con animaciones se generan con  tools/build_profile.py
+     (timings estilo anime.js horneados como CSS + SMIL: GitHub no
+     ejecuta JavaScript dentro de <img>, pero sí animaciones SVG).
+     ====================================================================== -->
 
-<img src="./assets/header-banner.gif" alt="Francisco Lanche - Medieval Arcade Adventure" width="100%" />
+<img src="./assets/neofetch-terminal.svg" width="100%" alt="Terminal neofetch de Francisco — retrato ASCII + ficha de desarrollador" />
 
-<br/><br/>
+<img src="./assets/terminal-divider.svg" width="100%" alt="" />
 
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
+<!-- =====================================================================
+     ZONA 2 · cat habilidades.json
+     ====================================================================== -->
 
-<!-- ========================================================
-     ZONA 2: FICHA DE PERSONAJE · CHARACTER STATUS
-     ======================================================== -->
-
-<br/>
-
-<img src="./assets/character-card.svg" width="100%" alt="Ficha de Personaje RPG - Francisco Lanche" />
-
-<br/><br/>
-
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
-
-<!-- ========================================================
-     ZONA 3: EL COFRE DEL ARSENAL · TECH STACK & INVENTARIO
-     ======================================================== -->
-
-<br/>
-
-<img src="./assets/tech-chest.svg" width="100%" alt="Cofre de Habilidades Tech" />
-
-<br/>
-
-### ⚔️ Equipamiento y Habilidades en Batalla
+<h2 align="center"><code>francisco@FranciscoLanche05</code>:~$ <code>cat habilidades.json</code></h2>
 
 <p align="center">
   <!-- Frontend -->
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/TypeScript-24283b?style=flat-square&logo=typescript&logoColor=e0af68" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/React-24283b?style=flat-square&logo=react&logoColor=7aa2f7" alt="React" />
+  <img src="https://img.shields.io/badge/Next.js-24283b?style=flat-square&logo=nextdotjs&logoColor=c0caf5" alt="Next.js" />
+  <img src="https://img.shields.io/badge/HTML5-24283b?style=flat-square&logo=html5&logoColor=f7768e" alt="HTML5" />
+  <img src="https://img.shields.io/badge/CSS3-24283b?style=flat-square&logo=css3&logoColor=7dcfff" alt="CSS3" />
   <br/>
   <!-- Backend -->
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white" alt="C#" />
-  <img src="https://img.shields.io/badge/Unity-100000?style=for-the-badge&logo=unity&logoColor=white" alt="Unity" />
+  <img src="https://img.shields.io/badge/Node.js-24283b?style=flat-square&logo=nodedotjs&logoColor=9ece6a" alt="Node.js" />
+  <img src="https://img.shields.io/badge/Python-24283b?style=flat-square&logo=python&logoColor=9ece6a" alt="Python" />
+  <img src="https://img.shields.io/badge/Java-24283b?style=flat-square&logo=openjdk&logoColor=f7768e" alt="Java" />
+  <img src="https://img.shields.io/badge/C%23-24283b?style=flat-square&logo=c-sharp&logoColor=bb9af7" alt="C#" />
+  <img src="https://img.shields.io/badge/Unity-24283b?style=flat-square&logo=unity&logoColor=c0caf5" alt="Unity" />
   <br/>
-  <!-- Databases & Tools -->
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/SQL_Server-CC292B?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" alt="SQL Server" />
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <!-- Datos & herramientas -->
+  <img src="https://img.shields.io/badge/MySQL-24283b?style=flat-square&logo=mysql&logoColor=7aa2f7" alt="MySQL" />
+  <img src="https://img.shields.io/badge/PostgreSQL-24283b?style=flat-square&logo=postgresql&logoColor=7dcfff" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/SQL_Server-24283b?style=flat-square&logo=microsoftsqlserver&logoColor=f7768e" alt="SQL Server" />
+  <img src="https://img.shields.io/badge/Git-24283b?style=flat-square&logo=git&logoColor=f7768e" alt="Git" />
+  <img src="https://img.shields.io/badge/Linux-24283b?style=flat-square&logo=linux&logoColor=c0caf5" alt="Linux" />
 </p>
 
-<br/>
+<img src="./assets/terminal-divider.svg" width="100%" alt="" />
 
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
+<!-- =====================================================================
+     ZONA 3 · ./stats.sh
+     ====================================================================== -->
 
-<!-- ========================================================
-     ZONA 4: SALÓN DE TROFEOS · ESTADÍSTICAS DEL REINO
-     ======================================================== -->
-
-<br/>
-
-<img src="./assets/trophy-stats.svg" width="100%" alt="Salón de Trofeos y Logros de Batalla" />
-
-<br/>
+<h2 align="center"><code>francisco@FranciscoLanche05</code>:~$ <code>./stats.sh --verbose</code></h2>
 
 <p align="center">
-  <img src="https://streak-stats.demolab.com/?user=FranciscoLanche05&theme=tokyonight&border=D4AF37&stroke=FFD700&ring=64FFDA&fire=FF5252&currStreakLabel=FFD700" alt="GitHub Streak" />
+  <img src="https://github-readme-stats.vercel.app/api?username=FranciscoLanche05&show_icons=true&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&icon_color=9ece6a&text_color=c0caf5&include_all_commits=true&count_private=true" height="150" alt="Estadísticas de GitHub" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FranciscoLanche05&layout=compact&theme=tokyonight&hide_border=true&bg_color=1a1b26&title_color=7aa2f7&text_color=c0caf5" height="150" alt="Lenguajes más usados" />
 </p>
 
-<br/>
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=FranciscoLanche05&hide_border=true&background=1a1b26&border=292E42&stroke=7AA2F7&ring=9ECE6A&fire=F7768E&currStreakNum=C0CAF5&sideNums=C0CAF5&currStreakLabel=E0AF68&sideLabels=565F89&dates=565F89" alt="Racha de commits" />
+</p>
 
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
+<img src="./assets/terminal-divider.svg" width="100%" alt="" />
 
-<!-- ========================================================
-     ZONA 5: LA ARENA DE LA SERPIENTE · CONTRIBUTION SNAKE
-     ======================================================== -->
+<!-- =====================================================================
+     ZONA 4 · python3 snake.py — la serpiente devoradora de commits
+     ====================================================================== -->
 
-<br/>
-
-<h2>🐍 LA ARENA DE LA SERPIENTE DEVORADORA DE CÓDIGO</h2>
+<h2 align="center"><code>francisco@FranciscoLanche05</code>:~$ <code>python3 snake.py</code></h2>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/FranciscoLanche05/FranciscoLanche05/output/github-contribution-grid-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/FranciscoLanche05/FranciscoLanche05/output/github-contribution-grid-snake.svg">
-    <img alt="GitHub Snake Animation" src="https://raw.githubusercontent.com/FranciscoLanche05/FranciscoLanche05/output/github-contribution-grid-snake.svg" width="100%">
+    <img alt="Animación de la serpiente de contribuciones" src="https://raw.githubusercontent.com/FranciscoLanche05/FranciscoLanche05/output/github-contribution-grid-snake.svg" width="100%">
   </picture>
 </p>
 
-<br/>
+<img src="./assets/terminal-divider.svg" width="100%" alt="" />
 
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
+<!-- =====================================================================
+     ZONA 5 · cat contacto.txt
+     ====================================================================== -->
 
-<!-- ========================================================
-     ZONA 6: TABLÓN DE MISIONES · PROYECTOS Y REPOSITORIOS
-     ======================================================== -->
-
-<br/>
-
-<img src="./assets/quest-board.svg" width="100%" alt="Tablón de Misiones" />
-
-<br/>
-
-<table align="center" width="100%">
-  <tr>
-    <td width="50%" valign="top">
-      <h3 align="center">🌟 Misiones Destacadas</h3>
-      <ul>
-        <li>🛡️ <b>Desarrollo Full Stack</b>: Aplicaciones dinámicas con frontend moderno y APIs robustas.</li>
-        <li>⚔️ <b>Arquitectura Limpia</b>: Código modular, estructurado y optimizado para alto rendimiento.</li>
-        <li>🎮 <b>Lógica &amp; Interactividad</b>: Experiencias de usuario inmersivas con mecánicas fluidas.</li>
-      </ul>
-    </td>
-    <td width="50%" valign="top">
-      <h3 align="center">📜 Registro de Repositorios</h3>
-      <p align="center">
-        ¡Explora mis más de <b>35+ repositorios</b> y acompáñame en cada aventura de código!
-      </p>
-      <p align="center">
-        <a href="https://github.com/FranciscoLanche05?tab=repositories">
-          <img src="https://img.shields.io/badge/⚔️_EXPLORAR_REPOSITORIOS-1E293B?style=for-the-badge&logo=github&logoColor=FFD700" alt="Explorar Repositorios" />
-        </a>
-      </p>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
-
-<!-- ========================================================
-     ZONA 7: LA TABERNA DEL GREMIO · CONTACTO Y REDES
-     ======================================================== -->
-
-<br/>
-
-<img src="./assets/tavern-contact.svg" width="100%" alt="La Taberna de Contacto" />
-
-<br/>
+<h2 align="center"><code>francisco@FranciscoLanche05</code>:~$ <code>cat contacto.txt</code></h2>
 
 <p align="center">
-  <a href="https://linkedin.com/in/franciscolanche" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  <img src="./assets/terminal-contact.svg" width="600" alt="Ventana de contacto — comandos para conectar" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/FranciscoLanche05">
+    <img src="https://img.shields.io/badge/%24%20github%20%2F%20cd%20github-1a1b26?style=flat-square&logo=github&logoColor=9ece6a" alt="GitHub" />
   </a>
-  &nbsp;
-  <a href="https://instagram.com/franciscolanche" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
+  <a href="https://linkedin.com/in/franciscolanche">
+    <img src="https://img.shields.io/badge/%24%20ssh%20linkedin-1a1b26?style=flat-square&logo=linkedin&logoColor=7aa2f7" alt="LinkedIn" />
   </a>
-  &nbsp;
-  <a href="https://discord.com" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" />
+  <a href="https://instagram.com/franciscolanche">
+    <img src="https://img.shields.io/badge/%24%20curl%20instagram-1a1b26?style=flat-square&logo=instagram&logoColor=bb9af7" alt="Instagram" />
   </a>
-  &nbsp;
+  <a href="https://discord.com">
+    <img src="https://img.shields.io/badge/%24%20open%20discord-1a1b26?style=flat-square&logo=discord&logoColor=7dcfff" alt="Discord" />
+  </a>
   <a href="mailto:franciscolanche@example.com">
-    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/FranciscoLanche05" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-FFB300?style=for-the-badge&logo=googlechrome&logoColor=black" alt="Portfolio" />
+    <img src="https://img.shields.io/badge/%24%20mail%20--subject%20hola-1a1b26?style=flat-square&logo=gmail&logoColor=f7768e" alt="Email" />
   </a>
 </p>
 
-<br/>
+<img src="./assets/terminal-divider.svg" width="100%" alt="" />
 
-<img src="./assets/divider.svg" width="100%" alt="Medieval Divider" />
-
-<!-- ========================================================
-     ZONA 8: CONTADOR DE VISITANTES DEL REINO
-     ======================================================== -->
-
-<br/>
+<!-- =====================================================================
+     ZONA 6 · whoami / visitas
+     ====================================================================== -->
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=FranciscoLanche05&label=🏰+AVENTUREROS+QUE+HAN+VISITADO+ESTE+REINO&color=d4af37&style=for-the-badge" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=FranciscoLanche05&label=visitas+al+shell&color=7aa2f7&style=flat-square" alt="Visitas al perfil" />
+  <img src="https://img.shields.io/badge/%24%20uptime%20--years%205-1a1b26?style=flat-square&logo=gnu-bash&logoColor=9ece6a" alt="5 años programando" />
 </p>
 
 <p align="center">
-  <i>⚔️ Desarrollado con pasión, creatividad y código por <b>Francisco Lanche</b> ⚔️</i>
+  <sub><b>francisco@FranciscoLanche05</b>:~$ <i>exit 0</i> — puerto cerrado, terminal viva.</sub>
 </p>
 
 </div>

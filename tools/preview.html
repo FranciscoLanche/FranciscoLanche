@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Francisco Lanche · Terminal Profile — preview con anime.js</title>
+<!--
+  PREVIEW LOCAL (solo para development / portfolio propio).
+
+  GitHub no ejecuta JavaScript dentro de los README (los SVG cargan como <img>
+  y el JS se elimina). Este playground demuestra cómo la MISMA escena se
+  animaría con anime.js real (misma paleta Tokyo Night, mismos tiempos que
+  config.py → T). Útil también como QA visual del terminal.
+
+  Ejecuta así (necesita http para fetch):
+      python3 -m http.server 8080 --directory <raíz del repo>
+      → abre http://localhost:8080/tools/preview.html
+-->
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+<style>
+  :root { color-scheme: dark; }
+  body { background: #0d0e14; margin: 0; padding: 28px 16px 48px;
+         font-family: 'JetBrains Mono', 'DejaVu Sans Mono', monospace; color: #c0caf5; }
+  h1 { font-size: 15px; color: #9ece6a; }
+  h1 code { color: #e0af68; }
+  p.note { font-size: 12px; color: #565f89; max-width: 860px; }
+  .scene { max-width: 880px; margin: 26px auto 0; }
+  svg { width: 100%; height: auto; display: block; }
+  button { font: inherit; margin: 4px 6px 22px 0; background: #24283b; color: #c0caf5;
+           border: 1px solid #2f334d; border-radius: 6px; padding: 7px 14px; cursor: pointer; }
+  button:hover { border-color: #7aa2f7; color: #7aa2f7; }
+</style>
+</head>
+<body>
+
+<h1>francisco@FranciscoLanche05:~$ <code>anime.js --preview</code></h1>
+<p class="note">
+  Réplica fiel de la animación de <code>neofetch-terminal.svg</code> pero dirigida por
+  <b>anime.js</b> (typewriter por steps + stagger de líneas + cursor en loop). Los SVG
+  entregados al README llevan la misma coreografía horneada con CSS/SMIL porque GitHub
+  no ejecuta JS en <code>&lt;img&gt;</code>. Cambia los tiempos en <code>tools/config.py</code>.
+</p>
+<button onclick="play()">▶ replay</button>
+
+<div class="scene" id="hero"></div>
+
+<script>
+(async function () {
+  const svgTextRaw = await (await fetch('../assets/neofetch-terminal.svg')).text();
+
+  // --- extrae los TIMINGS horneados por tools/build_profile.py -------------
+  const beginM = svgTextRaw.match(/begin="([\d.]+)s"/);
+  const typingStart = beginM ? parseFloat(beginM[1]) * 1000 : 450;
+  const valuesM = svgTextRaw.match(/values="([^"]+)"/);
+  const steps = valuesM ? valuesM[1].split(';') : [];
+  const cmdWidth = parseFloat(steps[steps.length - 1] || '62.4');
+  const cmdChars = steps.length - 1;
+
+  // delays de cada pieza (class="g" lleva style="animation-delay:…")
+  const delayGroups = [];   // [{delay(ms), els:[…]}]
+  const svgText = svgTextRaw
+    .replace(/<style>[\s\S]*?<\/style>/, '')
+    .replace(/<animate[^>]*\/>/g, '');
+  document.getElementById('hero').innerHTML = svgText;
+
+  const svg = document.querySelector('#hero svg');
+  const seen = {};
+  svg.querySelectorAll('[class="g"]').forEach(el => {
+    const d = Math.round(parseFloat(el.style.animationDelay || '0') * 1000);
+    if (d) (seen[d] = seen[d] || []).push(el);
+    el.style.opacity = 0; el.style.transform = 'translateY(6px)';
+  });
+  Object.keys(seen).sort((a, b) => a - b).forEach(d => delayGroups.push({ delay: +d, els: seen[d] }));
+
+  svg.querySelectorAll('clipPath rect').forEach(r => r.setAttribute('width', '0'));
+
+  const cursor = svg.querySelector('.blk');
+  const cursorDelay = cursor ? cursor.parentNode.style.animationDelay : '0';
+  if (cursor) cursor.parentNode.style.animationDelay = '';
+
+  let blink = null;
+
+  window.play = function () {
+    if (blink) blink.pause();
+
+    const tl = anime.timeline({ easing: 'easeOutCubic' });
+
+    // 1) reveal por delays exactos del builder
+    delayGroups.forEach(g => tl.add({
+      targets: g.els,
+      opacity: [ 0, 1 ],
+      translateY: [ 6, 0 ],
+      duration: 220
+    }, g.delay));
+
+    // 2) typewriter del comando (el clip avanza glifo a glifo)
+    tl.add({
+      targets: '#c1 rect',
+      width: [ 0, cmdWidth ],
+      duration: cmdChars * 55,
+      easing: 'steps(' + cmdChars + ')'
+    }, typingStart);
+
+    // 3) cursor en loop
+    const cd = parseFloat(cursorDelay) * 1000;
+    blink = anime({ targets: cursor, opacity: [ 0.9, 0 ], direction: 'alternate',
+                    easing: 'easeInOutQuad', duration: 550, loop: true });
+    blink.pause();
+    blink.delay = cd;
+    blink.play();
+  };
+
+  play();
+})();
+</script>
+</body>
+</html>
