@@ -1,0 +1,39 @@
+name: refresh datos del perfil
+
+# Corre cada noche: baja los datos reales de GitHub (repos, stars, followers,
+# calendario de contribuciones), cachea en assets/stats.json y regenera los
+# SVG del README. Commit solo si cambió algo.
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # 06:00 UTC diaria
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Descargar datos reales de GitHub
+        run: python3 tools/fetch_data.py
+
+      - name: Regenerar SVGs
+        run: python3 tools/build_profile.py
+
+      - name: Commit y push si cambió algo
+        run: |
+          git config user.name "francisco-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add assets
+          if git diff --cached --quiet; then
+            echo "sin cambios"
+          else
+            git commit -m "bot(refresh): datos + SVGs del perfil"
+            git push
+          fi
